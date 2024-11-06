@@ -6,14 +6,14 @@
 }
 body {
   font-family: sans-serif;
-  font-size: 16px;
+  background: #28282a;
 }
 nav {
-  background: #222;
+  background: #F9F9F9;
   padding: 0 15px;
 }
 a {
-  color: white;
+  color: rgb(18, 17, 17);
   text-decoration: none;
 }
 .menu,
@@ -24,6 +24,7 @@ a {
   font-size: 20px;
   padding: 7.5px 10px 7.5px 0;
 }
+
 .item {
   padding: 10px;
 }
@@ -45,6 +46,10 @@ a {
 Mobile menu 
 
                            0-700px*/
+
+.logoImage {
+  width: 150px;
+}
 .menu {
   display: flex;
   flex-wrap: wrap;
@@ -58,7 +63,8 @@ Mobile menu
 .menu li.subitem a {
   padding: 15px;
 }
-.toggle {           /* Hamburger menu */
+.toggle {
+  /* Hamburger menu */
   order: 1;
   font-size: 20px;
 }
@@ -118,15 +124,21 @@ Tablet menu             all devices 700px - 960px*/
 @media all and (min-width: 700px) {
   .menu {
     justify-content: center;
+    font-size: 18px;
   }
   .logo {
     flex: 1;
   }
+  .logoImage {
+    width: 300px;
+  }
   .item.button {
     width: auto;
     order: 1;
-    display: block;
+    display: none;
+    border-radius: 10px;
   }
+
   .toggle {
     flex: 1;
     text-align: right;
@@ -138,14 +150,13 @@ Tablet menu             all devices 700px - 960px*/
     margin: 5px 0;
   }
   .button a {
-    background: #0080ff;
+    background: #F9FBFA;
     border: 1px royalblue solid;
-    
+    border-radius: 10px;
   }
   .button.secondary {
     border: 0;
     display: none;
-
   }
   .button.secondary a {
     background: transparent;
@@ -155,7 +166,7 @@ Tablet menu             all devices 700px - 960px*/
     text-decoration: none;
   }
   .button:not(.secondary) a:hover {
-    background: royalblue;
+    background: #ADCB37;
     border-color: darkblue;
   }
 }
@@ -165,16 +176,34 @@ Tablet menu             all devices 700px - 960px*/
 
 
 
-Desktop menu        all devices 960px or bigger */
+
+
+
+
+
+
+
+
+
+
+
+Desktop menu        all devices 960px -1520 */
 @media all and (min-width: 960px) {
   .menu {
     align-items: flex-start;
     flex-wrap: nowrap;
     background: none;
+    font-size: 20px;
+  }
+  .logoImage {
+    width: 350px;
   }
 
-
-  
+  .item.button {
+    width: auto;
+    order: 1;
+    display: block;
+  }
   .logo {
     order: 0;
   }
@@ -191,7 +220,125 @@ Desktop menu        all devices 960px or bigger */
   .button.secondary {
     /* border: 0; */
     display: none;
+  }
+  .submenu-active .submenu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 68px;
+    background: #111;
+  }
+  .toggle {
+    display: none;
+  }
+  .submenu-active {
+    border-radius: 0;
+  }
+}
 
+/* 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ */
+
+
+@media all and (min-width: 1520px) {
+  .menu {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    background: none;
+    font-size: 24px;
+  }
+  .logoImage {
+    width: 450px;
+  }
+
+  .logo {
+    order: 0;
+  }
+  .item {
+    order: 1;
+    position: relative;
+    display: block;
+    width: auto;
+  }
+  .button {
+    order: 2;
+  }
+
+  .button.secondary {
+    /* border: 0; */
+    display: none;
+  }
+  .submenu-active .submenu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 68px;
+    background: #111;
+  }
+  .toggle {
+    display: none;
+  }
+  .submenu-active {
+    border-radius: 0;
+  }
+}
+
+/* 
+
+
+
+
+
+
+
+
+
+
+
+
+                  large screens   1920 and bigger*/
+
+@media all and (min-width: 1920px) {
+  .menu {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    background: none;
+    font-size: 26px;
+  }
+  .logoImage {
+    width: 500px;
+  }
+
+  .logo {
+    order: 0;
+  }
+  .item {
+    order: 1;
+    position: relative;
+    display: block;
+    width: auto;
+  }
+  .button {
+    order: 2;
+  }
+
+  .button.secondary {
+    /* border: 0; */
+    display: none;
   }
   .submenu-active .submenu {
     display: block;
