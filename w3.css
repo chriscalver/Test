@@ -172,6 +172,9 @@ Desktop menu        all devices 960px or bigger */
     flex-wrap: nowrap;
     background: none;
   }
+
+
+  
   .logo {
     order: 0;
   }
@@ -187,7 +190,7 @@ Desktop menu        all devices 960px or bigger */
 
   .button.secondary {
     /* border: 0; */
-    display: block;
+    display: none;
 
   }
   .submenu-active .submenu {
